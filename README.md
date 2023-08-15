@@ -1,8 +1,6 @@
 # Order Info App
 
-This application allows users to retrieve order details by entering their order number and ZIP code.
-
-Built with [Next.js](https://nextjs.org/), this app provides server-side rendering and routing capabilities, ensuring a fast and seamless user experience.
+Built with [Next.js](https://nextjs.org/)
 
 ## Features
 
@@ -21,29 +19,37 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-1. **Clone the Repository**:
+1.  **Clone the Repository**:
 
-   ```bash
-   git clone https://github.com/your-username/order-info-app.git
-   cd order-info-app
+    ```bash
+    git clone https://github.com/Dragidare/order-info-app.git
+    cd order-info-app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2.  **# Running the App**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    After installing the dependencies, you can run the app in development mode with:
 
-## Learn More
+        ```bash
+            npm run dev
+        ```
 
-To learn more about Next.js, take a look at the following resources:
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    To run the automated tests:
 
-## Deploy on Vercel
+        ```bash
+            npm test
+        ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    This will run all tests and provide output in the terminal.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Replacing the Mocked API Call
+
+Currently, the app uses a mocked API response. If you wish to replace this with an actual API:
+
+- Navigate to the file and function where the mocked API call is made ('/src/pages/api/[orderNumber].ts').
+- Replace the mock function or mocked data with your actual API call using tools like `fetch` or any other API request libraries.

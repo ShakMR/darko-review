@@ -1,16 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Order Info App
+
+This application allows users to retrieve order details by entering their order number and ZIP code.
+
+Built with [Next.js](https://nextjs.org/), this app provides server-side rendering and routing capabilities, ensuring a fast and seamless user experience.
+
+## Features
+
+- **Form Input**: Users can input their order number and ZIP code to retrieve order details.
+- **Order Details Display**: Once the form is submitted, order details are displayed on a separate page.
+- **Mocked API Calls**: The current app uses mocked API responses, but this can be easily replaced with actual API calls.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Recommended version or later)
+- [npm](https://www.npmjs.com/) (comes bundled with Node.js)
+
+### Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/your-username/order-info-app.git
+   cd order-info-app
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

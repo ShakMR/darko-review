@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (Recommended version or later)
+- [Node.js](https://nodejs.org/) (Recommended latest version)
 - [npm](https://www.npmjs.com/) (comes bundled with Node.js)
 
 ### Installation
@@ -27,25 +27,16 @@ These instructions will get you a copy of the project up and running on your loc
 
     ```
 
-2.  **# Running the App**
+2.  **Running the App**
 
     After installing the dependencies, you can run the app in development mode with:
 
-        ```bash
-            npm run dev
-        ```
+       ```bash
+       npm run dev
+       ```
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Testing
-
-    To run the automated tests:
-
-        ```bash
-            npm test
-        ```
-
-    This will run all tests and provide output in the terminal.
 
 ### Replacing the Mocked API Call
 
@@ -53,3 +44,13 @@ Currently, the app uses a mocked API response. If you wish to replace this with 
 
 - Navigate to the file and function where the mocked API call is made ('/src/pages/api/[orderNumber].ts').
 - Replace the mock function or mocked data with your actual API call using tools like `fetch` or any other API request libraries.
+
+### Testing
+
+To run the automated tests:
+
+```bash
+npm test
+```    
+
+This will run all tests and provide output in the terminal.

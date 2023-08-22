@@ -20,21 +20,25 @@ const Home: React.FC = () => {
       responseError: "",
     };
 
-    // Validation for orderNumber and zipCode
     if (!orderNumber) newErrors.orderNumber = "Order number is required.";
     if (!zipCode) newErrors.zipCode = "Zip code is required.";
 
-    // If validation errors exist, update the error state and exit the function
     if (newErrors.orderNumber || newErrors.zipCode) {
       setErrors(newErrors);
       return;
     }
 
-    // Fetching logic
     const res = await fetch(`/api/${orderNumber}?zip=${zipCode}`);
+
+    /*
+    What if there's an error in the fetch.
+    4XX: -- think about how your code will behave
+    5XX: -- think about how your code will behave
+     */
     const data = await res.json();
 
     if (res.status === 200) {
+      // this funciton is async, maybe you want to await for it? or catch it?
       router.push(`/order/${orderNumber}/${zipCode}`);
     } else {
       newErrors.responseError =
@@ -43,6 +47,8 @@ const Home: React.FC = () => {
     }
   };
 
+  // General comment for the whole of the return. Maybe if you have time and want to, consider creating components.
+  // for example, the <div> containing the fields could be a reusable component.
   return (
     <div className="flex items-center justify-center min-h-screen">
       <form

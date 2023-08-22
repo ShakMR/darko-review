@@ -40,6 +40,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Replacing the Mocked API Call
 
+// Maybe you can explain how this mock is done?  I know you are using next.js serverside things, but maybe they don't 
+know how it works.
 Currently, the app uses a mocked API response. If you wish to replace this with an actual API:
 
 - Navigate to the file and function where the mocked API call is made ('/src/pages/api/[orderNumber].ts').

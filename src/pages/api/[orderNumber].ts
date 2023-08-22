@@ -2,11 +2,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 import orders from "./orders.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log(orders);
-  const { orderNumber } = req.query;
-  const zipCode = req.query.zip;
+  const { orderNumber, zipCode } = req.query;
   const order = orders.find(
-    (o) => o.tracking_number === orderNumber && o.zip_code === zipCode
+      // you could move the types defined in the frontend into a separate folder and use them here too.
+      // also, instead of using 'o' as a name, don't be lazy, use order (Clean Code)
+    (o /* :Orders */) => o.tracking_number === orderNumber && o.zip_code === zipCode
   );
 
   if (order) {

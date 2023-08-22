@@ -7,6 +7,7 @@ type Meta = {
   pickup_address_map_url ?: string;
   pickup_address_link?: string;
 };
+
 type Checkpoint = {
   status: string;
   status_details: string;
@@ -106,12 +107,20 @@ const OrderView = () => {
       </div>
     );
   }
+
+  /*
+   "Rule" from Clean Code:
+   if you need comments to separate some parts of the code, maybe you need to separate that part of the code in
+   functions/components/whatever.
+   */
+
   return (
     <div className="flex flex-col items-start justify-center min-h-screen p-8">
       <img src="/logo.png" alt="Logo" className="rounded mb-8 w-24 h-24" />
       {/* Three main sections */}
       <div className="flex space-x-8">
         {/* Details Element */}
+        {/* COMPONENT */}
         <div className="flex-1 bg-white p-8 rounded-lg">
           <h2 className="text-xl font-bold">{order?.checkpoints[0].status}</h2>
           <p className="text-gray-600 mt-2">
@@ -161,6 +170,7 @@ const OrderView = () => {
         </div>
 
         {/* Shipping Updates */}
+        {/* COMPONENT */}
         <div className="flex-1 bg-white p-8 rounded-lg">
           <h2 className="text-xl font-bold">Shipping Updates</h2>
           <ul className="mt-4 space-y-4">
@@ -178,6 +188,7 @@ const OrderView = () => {
         </div>
 
         {/* Articles & Details */}
+        {/* COMPONENT */}
         <div className="flex-1 bg-white p-8 rounded-lg">
           <h2 className="text-xl font-bold">Articles</h2>
           {/* Here's a placeholder for your articles list. You'd iterate over your articles data, similar to how checkpoints are done. */}
